@@ -141,3 +141,15 @@ a {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 600px) {
+  .label-text {
+    top: 27%;
+    width: 86%;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}
+
