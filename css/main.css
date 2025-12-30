@@ -97,7 +97,7 @@ a {
 
 /* Instruction list */
 .list {
-  list-style-position: inside;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
