@@ -43,14 +43,14 @@ body {
 .label-text {
   position: absolute;
 
-  /* Move the overlay DOWN into the big rounded sticker */
-  top: 23%;
+  /* This puts the title where your BLACK line is */
+  top: 31%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  /* Define the sticker region (so the text centers within it) */
-  width: 82%;
-  height: 18%;
+  width: 78%;
+  height: 12%;
+
   display: grid;
   place-items: center;
 
@@ -78,7 +78,7 @@ body {
 
 /* Content below cassette */
 .content {
-  margin-top: 0.25rem;  /* was 0.6–0.8rem */
+  margin-top: 0.15rem;  /* was 0.6–0.8rem */
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
