@@ -42,12 +42,11 @@ body {
 /* Text that sits on the cassette label */
 .label-text {
   position: absolute;
-  top: 14%;
+  top: 17%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 78%;
+  transform: translate(-50%, -50%);
+  width: 70%;
   text-align: center;
-  color: #000;
   pointer-events: none;
 }
 
@@ -63,9 +62,9 @@ body {
 }
 
 .mission {
-  margin: 0.2rem 0 0;
-  font-size: 0.95rem;
-  color: rgba(0, 0, 0, 0.65);
+  margin: 0 0 1.2rem;
+  font-size: 1.05rem;
+  color: var(--white);
 }
 
 /* Content below cassette */
