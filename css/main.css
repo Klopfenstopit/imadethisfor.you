@@ -1,6 +1,6 @@
 :root {
-  --white: #ffffff;
-  --muted: rgba(255, 255, 255, 0.72);
+  --text: #e6e6e3;
+--muted: rgba(230, 230, 227, 0.72);
 }
 
 * {
@@ -14,7 +14,7 @@ html, body {
 
 body {
   background: #000;
-  color: var(--white);
+  color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
   line-height: 1.5;
 }
@@ -73,7 +73,7 @@ body {
 .mission {
   margin: 0 0 1.2rem;
   font-size: 1.05rem;
-  color: var(--white);
+  color: var(--text);
 }
 
 /* Content below cassette */
