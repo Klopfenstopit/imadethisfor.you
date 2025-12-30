@@ -1,6 +1,6 @@
 :root {
   --white: #ffffff;
-  --muted: rgba(255, 255, 255, 0.75);
+  --muted: rgba(255, 255, 255, 0.72);
 }
 
 * {
@@ -8,49 +8,47 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
   background: #000;
   color: var(--white);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
-/* Background: black void + floating cassette */
-.bg {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: #000;
-  z-index: 0;
-}
-
-.bg::before {
-  content: "";
-  width: min(92vw, 920px);
-  aspect-ratio: 16 / 9;
-  background: url("/images/cassette.png") center / contain no-repeat;
-  opacity: 0.95;
-}
-
-/* Content */
-.content {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  margin: 12vh auto;
-  padding: 0 1.2rem;
+/* Overall stage */
+.stage {
+  max-width: 900px;
+  margin: 8vh auto 10vh;
+  padding: 0 1.25rem;
   text-align: center;
 }
 
-/* Header */
-.header {
-  margin-bottom: 2rem;
+/* Cassette + label */
+.cassette-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.cassette {
+  width: min(92vw, 820px);
+  height: auto;
+  display: block;
+}
+
+/* Text that sits on the cassette label */
+.label-text {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78%;
+  text-align: center;
+  color: #000;
+  pointer-events: none;
 }
 
 .title {
@@ -60,17 +58,20 @@ body {
 }
 
 .mission {
-  margin: 0.5rem 0 0;
-  font-size: 1.05rem;
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
 }
 
-/* Sections */
-.section {
-  margin-top: 1.6rem;
+/* Content below cassette */
+.content {
+  margin-top: 2.2rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lead {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 a {
@@ -80,11 +81,11 @@ a {
   text-underline-offset: 2px;
 }
 
-/* List */
+/* Instruction list */
 .list {
+  list-style-position: inside;
+  padding: 0;
   margin: 0;
-  padding-left: 1.2rem;
-  text-align: left;
 }
 
 .list li {
@@ -98,30 +99,31 @@ a {
   font-size: 0.95rem;
 }
 
-/* Small print */
+/* Footer text */
 .smallprint {
   margin-top: 1.8rem;
   font-size: 0.95rem;
   color: var(--muted);
 }
 
-/* Footer */
-.footer {
-  margin-top: 1.6rem;
-}
-
 .whisper {
+  margin-top: 0.9rem;
   font-size: 0.95rem;
   color: var(--muted);
 }
 
-/* Mobile adjustments */
+/* Mobile tuning */
 @media (max-width: 520px) {
-  .content {
-    margin: 10vh auto;
+  .label-text {
+    top: 12%;
+    width: 86%;
   }
 
-  .bg::before {
-    width: 96vw;
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .mission {
+    font-size: 0.9rem;
   }
 }
