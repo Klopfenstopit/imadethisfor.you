@@ -42,12 +42,21 @@ body {
 /* Text that sits on the cassette label */
 .label-text {
   position: absolute;
-  top: 17%;
+
+  /* Move the overlay DOWN into the big rounded sticker */
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+
+  /* Define the sticker region (so the text centers within it) */
+  width: 82%;
+  height: 18%;
+  display: grid;
+  place-items: center;
+
   text-align: center;
   pointer-events: none;
+  z-index: 2;
 }
 
 .title {
@@ -69,7 +78,7 @@ body {
 
 /* Content below cassette */
 .content {
-  margin-top: 0.8rem;
+  margin-top: 0.25rem;  /* was 0.6–0.8rem */
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
