@@ -9,15 +9,25 @@
 </head>
 
 <body>
-  <div class="bg" aria-hidden="true"></div>
+  <main class="stage" role="main">
 
-  <main class="content" role="main">
-    <header class="header">
-      <h1 class="title">imadethisfor.you</h1>
-      <p class="mission">I will make a mix tape for you.</p>
-    </header>
+    <!-- Cassette block -->
+    <div class="cassette-wrap" aria-hidden="true">
+      <img
+        src="/images/cassette.png"
+        alt=""
+        class="cassette"
+      />
 
-    <section class="section">
+      <!-- Title positioned over the label -->
+      <div class="label-text">
+        <h1 class="title">imadethisfor.you</h1>
+        <p class="mission">I will make a mix tape for you.</p>
+      </div>
+    </div>
+
+    <!-- Content below cassette -->
+    <section class="content">
       <p class="lead">
         Send your request to
         <a href="mailto:Hey@imadethisfor.you">Hey@imadethisfor.you</a>
@@ -39,19 +49,3 @@
         <li>
           <strong>Your address.</strong>
           <span class="muted">
-            If physical, include a postal address. If virtual, include an email address.
-          </span>
-        </li>
-
-        <li>
-          <strong>One constraint.</strong>
-          <span class="muted">
-            I like this. I hate this. Wood grain paneling. Moist clammy hands. Echoes.
-          </span>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section smallprint">
-      <p>
-        No information is stored in any
