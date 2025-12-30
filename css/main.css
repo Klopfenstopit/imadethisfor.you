@@ -34,7 +34,7 @@ body {
   content: "";
   width: min(92vw, 920px);
   aspect-ratio: 16 / 9;
-  background: url("/images/cassette.jpg") center / contain no-repeat;
+  background: url("/images/cassette.png") center / contain no-repeat;
   opacity: 0.95;
 }
 
