@@ -44,7 +44,7 @@ body {
   position: absolute;
 
   /* This puts the title where your BLACK line is */
-  top: 23%;
+  top: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
 
