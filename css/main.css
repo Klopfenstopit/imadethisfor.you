@@ -1,0 +1,121 @@
+:root {
+  --text: #121212;
+  --muted: rgba(18, 18, 18, 0.70);
+  --card: rgba(255, 255, 255, 0.84);
+  --border: rgba(18, 18, 18, 0.14);
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  color: var(--text);
+  line-height: 1.45;
+  overflow-x: hidden;
+}
+
+/* Backdrop image + readability overlay */
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    url("/images/cassette.jpg") center / cover no-repeat;
+  transform: scale(1.03);
+  filter: saturate(0.92) contrast(1.05);
+}
+
+/* Card */
+.card {
+  position: relative;
+  max-width: 760px;
+  margin: 10vh auto;
+  padding: 1.6rem 1.6rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+}
+
+.mission {
+  margin: 0.45rem 0 0;
+  font-size: 1.05rem;
+}
+
+.section {
+  margin-top: 1.2rem;
+}
+
+.lead {
+  margin: 0 0 0.9rem;
+  font-size: 1.02rem;
+}
+
+.email {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.list li {
+  margin: 0.85rem 0;
+}
+
+.muted {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.smallprint {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer {
+  margin-top: 0.85rem;
+  text-align: center;
+  color: rgba(18, 18, 18, 0.78);
+}
+
+.whisper {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* Mobile tuning */
+@media (max-width: 520px) {
+  .card {
+    margin: 7vh 1rem;
+    padding: 1.25rem 1.15rem 1rem;
+  }
+}
